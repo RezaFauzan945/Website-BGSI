@@ -157,12 +157,19 @@
             </div>
             <div class="mb-3">
               <label for="phone" class="form-label">Phone:</label>
-              <input
-                type="tel"
-                class="form-control"
-                id="phone"
-                placeholder="812xxxxxxxxxx"
-              />
+              <div class="row">
+                <div class="col-2">
+                  <input class="form-control" id="country" type="tel" maxlength="3" placeholder="+62">
+                </div>
+                <div class="col-10">
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="phone"
+                    placeholder="812xxxxxxxxxx"
+                  />
+                </div>
+              </div>
             </div>
             <div class="mb-3">
               <label for="organization" class="form-label">Organization:</label>
