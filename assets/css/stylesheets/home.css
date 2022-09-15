@@ -1,5 +1,5 @@
 .footer {
-  background: #16B3AC;
+  background: #16b3ac;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -9,9 +9,13 @@
 }
 
 .footer {
-  background: #16B3AC;
+  background: #16b3ac;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.text-primary {
+  color: #16b3ac;
 }
 
 @media only screen and (min-width: 768px) {
