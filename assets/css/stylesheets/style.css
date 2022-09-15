@@ -12,3 +12,7 @@ html,body{position:relative}.std-bg-dark-25{background:#525854;color:#fff !impor
 .filter-blue{
     background : linear-gradient(180deg, #16b3ac 0%,rgba(0,0,0,0.05) 114.19%);
 }
+
+.text-justify {
+    text-align: justify;
+}
