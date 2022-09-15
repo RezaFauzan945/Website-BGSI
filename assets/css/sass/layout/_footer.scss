@@ -1,0 +1,91 @@
+// -----------------------------------------------------------------------------
+// This file contains style related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+.footer{
+    padding: 45px 15px 0;
+    background: material(grey, 800);
+    color: standard(default, light_25);
+    .brand{
+        width: 110px;
+        margin: 0 auto;
+    }
+    .address-list{
+        margin-bottom: 1.5rem;
+        @include media_max(lg){
+            margin-bottom: 1rem;
+        }
+        >.nav-item{
+            display: flex;
+            margin-bottom: 20px;
+            .icon{
+                position: relative;
+                top: 6px;
+                width: 15px;
+                @include font_size(set(base, lg));
+            }
+            p{
+                padding-left: 15px;
+                line-height: 2;
+            }
+        }
+    }
+    .sosmed-list{
+        margin-bottom: 2rem;
+        @include media_max(lg){
+            display: inline-flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .nav-item{
+            margin-right: 20px;
+            @include media_max(lg){
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+            .nav-link{
+                padding: 0;
+                color: standard(default, light_25);
+                &:hover{
+                    color: standard(template, primary_main);
+                }
+                .icon{
+                    @include font_size(set(header, lg));
+                    @include media_max(lg){
+                        @include font_size(set(header, xl));
+                    }
+                }
+            }
+        }
+    }
+    .nav-footer-menu{
+        @include media_max(lg){
+            display: inline-flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .nav-item{
+            .nav-link{
+                padding: 8px 0;
+                color: standard(default, light_25);
+                @include media_max(lg){
+                    display: block;
+                    padding: 8px 16px;
+                    text-align: center;
+                }
+                &:hover{
+                    color: standard(template, primary_main);
+                }
+            }
+        }
+    }
+    .copyright{
+        border-top: 1px solid standard(default, light_25);
+        padding: 26px 15px;
+        margin-top: 15px;
+        >p{
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,79 @@
+// -----------------------------------------------------------------------------
+// This file contains style related to the navbar of the site/application.
+// -----------------------------------------------------------------------------
+
+.navbar{
+    min-height: 100px;
+    padding: 30px 25px;
+    @include media_max(lg){
+        padding: 25px 15px;
+    }
+    z-index: 1;
+    .navbar{
+        &-brand{
+            width: 84px;
+            > img{
+                width: 100%;
+            }
+        }
+        &-nav{
+            margin-right: 15px;
+            @include media_max(lg){
+                margin: 25px 0 0 0;
+            }
+            .nav{
+                &-item{
+                    .dropdown{
+                        &-menu{
+                            margin-top: 30px;
+                            @include media_max(lg){
+                                margin-top: 0px;
+                                box-shadow: unset;
+                                background: transparent;
+                                border: 0;
+                                border-radius: 0;
+                                border-bottom: 1px solid material(grey, 300);
+                            }
+                        }
+                        &-item{
+                            text-align: center;
+                            @include media_max(lg){
+                                text-align: left;
+                            }
+                        }
+                    }
+                    @include media_max(lg){
+                        &:last-child{
+                            .nav-link{
+                                border-bottom: 0!important;
+                            }
+                        }
+                    }
+                }
+                &-link{
+                    border-radius: 8px;
+                    padding: 8px 16px;
+                    color: standard(default, dark_100);
+                    @include font_size(set(base, md));
+                    @include media_max(lg){
+                        border-radius: 0;
+                        border-bottom: 1px solid material(grey, 300);
+                        padding: 12px 16px;
+                    }
+                    &:hover{
+                        background: standard(default, light_100);
+                    }
+                    &:active,
+                    &.active{
+                        color: standard(template, primary_main);
+                    }
+                }
+            }
+        }
+    }
+    .nav-btn-menu{
+        @include media_max(lg){
+            width: 100%;
+        }
+    }
+}

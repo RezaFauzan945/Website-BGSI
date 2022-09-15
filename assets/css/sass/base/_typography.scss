@@ -1,0 +1,38 @@
+// -----------------------------------------------------------------------------
+// This file contains typography rules
+// -----------------------------------------------------------------------------
+
+
+body {
+    @include font_size(set(base, md));
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+address,
+p{
+    margin-bottom: 0;
+    a{
+        text-decoration: underline;
+    }
+}
+
+.text-strike{
+    text-decoration: line-through;
+}
+
+
+p, a, label, div, span{
+    @extend .text-regular;
+    i{
+        font-size: 90%;
+    }
+}
+
+p{
+    margin-bottom: 0;
+}

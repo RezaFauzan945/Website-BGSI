@@ -1,0 +1,36 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+.featured-metric{
+    padding: 1.5rem 0;
+    margin-bottom: 25px;
+    @include media_max(lg){
+        padding: .5rem 0 .5rem;
+        margin-bottom: 0!important;
+    }
+    .metric{
+        &-item{
+            text-align: center;
+        }
+        &-total{
+            @include font_size(set(header, xxl));
+            margin-bottom: 10px;
+            color: standard(template, primary_main);
+            @include media_max(sm){
+                margin-bottom: 6px;
+                @include font_size(set(header, lg));
+            }
+        }
+        &-caption{
+            color: standard(default, dark_25);
+            @include media_max(lg){
+                margin-bottom: 15px;
+            }
+            @include media_max(sm){
+                margin-bottom: 20px;
+                @include font_size(set(base, sm));
+            }
+        }
+    }
+}

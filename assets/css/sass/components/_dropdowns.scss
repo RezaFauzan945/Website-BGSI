@@ -1,0 +1,30 @@
+// -----------------------------------------------------------------------------
+// This file contains dropdown ui component rules
+// -----------------------------------------------------------------------------
+
+.dropdown{
+	&-menu{
+		border-color: material(grey, 300);
+		box-shadow: standard(shadows, z2);
+	}
+	&-toggle{
+		&.uncaret{
+			&::after{
+				display: none;
+			}
+		}
+	}
+	&-item{
+		padding: 6px 15px 6px 15px;
+		@include font_size(set(base, md));
+		&:hover{
+			background: standard(template, primary_surface);
+			color: standard(default, dark_100);
+		}
+		&:active,
+		&.active{
+			background: standard(template, primary_main);
+			color: standard(default, light_25);
+		}
+	}
+}

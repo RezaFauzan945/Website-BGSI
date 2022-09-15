@@ -1,0 +1,36 @@
+.footer {
+  background: #16b3ac;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.card-service {
+  top: -240px;
+}
+
+.footer {
+  background: #16b3ac;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.text-primary{
+  color: #16b3ac;
+}
+
+@media only screen and (min-width: 768px) {
+  .card-service {
+    top: -200px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .card-service {
+    top: -150px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .card-service {
+    top: -50px;
+  }
+}

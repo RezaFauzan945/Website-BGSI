@@ -1,0 +1,91 @@
+// -----------------------------------------------------------------------------
+// This file contains badge ui component rules
+// -----------------------------------------------------------------------------
+
+// $variable = (states, background, text-color)
+
+$defaultBadge: (
+	"default",
+	standard(default, light_100),
+	standard(default, blue_grey_100)
+);
+
+$primaryBadge: (
+	"primary",
+	standard(default, primary_10),
+	standard(default, primary_100)
+);
+
+$secondaryBadge: (
+	"secondary",
+	standard(default, secondary_10),
+	standard(default, secondary_100)
+);
+
+$successBadge: (
+	"success",
+	material(teal, 50),
+	material(teal, 600)
+);
+
+$warningBadge: (
+	"warning",
+	material(deep_orange, 50),
+	material(deep_orange, 600)
+);
+
+$dangerBadge: (
+	"danger",
+	standard(default, danger_10),
+	standard(default, danger_100)
+);
+
+$infoBadge: (
+	"info",
+	standard(default, info_10),
+	standard(default, info_100)
+);
+
+$disabledBadge: (
+	"disabled",
+	standard(default, blue_grey_50),
+	standard(default, blue_grey_25)
+);
+
+$darkBadge: (
+	"dark",
+	standard(default, dark_100),
+	standard(default, light_25)
+);
+
+$lightBadge: (
+	"light",
+	standard(default, light_25),
+	standard(default, blue_grey_100)
+);
+
+$transparentBadge: (
+	"transparent",
+	transparent,
+	standard(default, dark_25)
+);
+
+$linkBadge: (
+	"link",
+	transparent,
+	standard(default, primary_75)
+);
+
+$badgeColorGroup: $defaultBadge, $primaryBadge, $secondaryBadge,
+	$successBadge, $dangerBadge, $warningBadge, $infoBadge,
+	$disabledBadge, $darkBadge, $lightBadge, $transparentBadge, $linkBadge;
+
+
+@each $states, $background, $textColor in $badgeColorGroup {
+  @include badge-color-config($states, $background, $textColor);
+}
+
+.badge{
+  @include font-type(Regular);
+  @include font_size(set(base, md));
+}

@@ -1,0 +1,32 @@
+// -----------------------------------------------------------------------------
+// This file contains generic rules
+// -----------------------------------------------------------------------------
+
+.header-intro{
+    padding: 2.5rem 15px 1.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+    @include media_max(lg){
+        padding: 2rem 15px 1rem;
+    }
+    >.title{
+        padding: 20px 0 15px;
+        @include font-type(Bold);
+
+        @include media_max(lg){
+            padding: 15px 0 10px;
+        }
+        @include media_max(sm){
+            padding: 0 0 10px;
+            @include font_size(set(header, sm));
+        }
+    }
+    >.caption{
+        color: standard(default, dark_25);
+        line-height: 2;
+        @include media_max(sm){
+            @include font_size(set(base, sm));
+            line-height: 1.5;
+        }
+    }
+}

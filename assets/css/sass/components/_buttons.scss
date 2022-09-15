@@ -1,0 +1,133 @@
+// -----------------------------------------------------------------------------
+// This file contains buttons ui component rules
+// -----------------------------------------------------------------------------
+
+// $variable = (states, background, background-hover, border-color, text-color, text-color-outline, shadow)
+
+$defaultButtons: (
+    "default",
+    standard(default, light_75),
+    standard(default, light_100),
+    material(blue_grey, 100),
+    standard(default, dark_100),
+    standard(default, light_75),
+    material_shadow(blue_grey, xs, 40)
+);
+
+$primaryButtons: (
+    "primary",
+    standard(template, primary_main),
+    standard(template, primary_hover),
+    standard(template, primary_main),
+    standard(default, light_25),
+    standard(template, primary_main),
+    standard(shadows, z2)
+);
+
+$secondaryButtons: (
+    "secondary",
+    standard(template, secondary_main),
+    standard(template, secondary_hover),
+    standard(template, secondary_main),
+    standard(default, light_25),
+    standard(template, secondary_main),
+    standard(shadows, z2)
+);
+
+$successButtons: (
+    "success",
+    standard(template, success_main),
+    standard(template, success_hover),
+    standard(template, success_main),
+    standard(default, light_25),
+    standard(template, success_main),
+    standard(shadows, z2)
+);
+
+$warningButtons: (
+    "warning",
+    standard(template, warning_main),
+    standard(template, warning_hover),
+    standard(template, warning_main),
+    standard(default, light_25),
+    standard(template, warning_main),
+    standard(shadows, z2)
+);
+
+$dangerButtons: (
+    "danger",
+    standard(template, danger_main),
+    standard(template, danger_hover),
+    standard(template, danger_main),
+    standard(default, light_25),
+    standard(template, danger_main),
+    standard(shadows, z2)
+);
+
+$infoButtons: (
+    "info",
+    standard(template, info_main),
+    standard(template, info_hover),
+    standard(template, info_main),
+    standard(default, light_25),
+    standard(template, info_main),
+    standard(shadows, z2)
+);
+
+$disabledButtons: (
+    "disabled",
+    standard(default, grey_25),
+    standard(default, grey_25),
+    standard(default, grey_25),
+    standard(default, grey_50),
+    standard(default, grey_50),
+    material_shadow(blue_grey, xs, 40)
+);
+
+$darkButtons: (
+    "dark",
+    standard(default, dark_50),
+    standard(default, dark_75),
+    standard(default, dark_50),
+    standard(default, light_25),
+    standard(default, dark_50),
+    material_shadow(blue_grey, xs, 40)
+);
+
+$lightButtons: (
+    "light",
+    standard(default, light_25),
+    standard(default, light_75),
+    standard(default, light_25),
+    standard(template, primary_main),
+    standard(template, primary_main),
+    material_shadow(blue_grey, xs, 40)
+);
+
+$buttonsColorGroup: $defaultButtons, $primaryButtons, $secondaryButtons,
+    $successButtons, $dangerButtons, $warningButtons, $infoButtons,
+    $disabledButtons, $darkButtons, $lightButtons;
+
+@each $states, $background, $backgroundHover, $borderColor, $textColor, $textColorOutline, $shadow in $buttonsColorGroup {
+    @include buttons-color-config(
+        $states,
+        $background,
+        $backgroundHover,
+        $borderColor,
+        $textColor,
+        $textColorOutline,
+        $shadow
+    );
+}
+
+.btn {
+    border-radius: 6px;
+    padding: 8px 16px;
+    @include font_size(set(base, md));
+    &.btn-square {
+        width: 32px;
+        height: 32px;
+        padding: 2px;
+        @include flexCenter;
+    }
+}

@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the default basic theme
+// -----------------------------------------------------------------------------
+
+body {
+    &.basic-theme{
+        @import "themes/default/basic";
+        @import "themes/default/red";
+        @import "themes/default/pink";
+        @import "themes/default/purple";
+        @import "themes/default/deep_purple";
+        @import "themes/default/indigo";
+        @import "themes/default/blue";
+        @import "themes/default/light_blue";
+        @import "themes/default/cyan";
+        @import "themes/default/teal";
+        @import "themes/default/green";
+        @import "themes/default/light_green";
+        @import "themes/default/lime";
+        @import "themes/default/yellow";
+        @import "themes/default/amber";
+        @import "themes/default/orange";
+        @import "themes/default/deep_orange";
+        @import "themes/default/brown";
+        @import "themes/default/grey";
+        @import "themes/default/blue_grey";
+    }
+}

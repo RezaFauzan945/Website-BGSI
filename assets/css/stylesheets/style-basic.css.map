@@ -1,0 +1,29 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../sass/style-basic.scss",
+        "../sass/themes/default/_basic.scss",
+        "../sass/themes/default/_red.scss",
+        "../sass/themes/default/_pink.scss",
+        "../sass/themes/default/_purple.scss",
+        "../sass/themes/default/_deep_purple.scss",
+        "../sass/themes/default/_indigo.scss",
+        "../sass/themes/default/_blue.scss",
+        "../sass/themes/default/_light_blue.scss",
+        "../sass/themes/default/_cyan.scss",
+        "../sass/themes/default/_teal.scss",
+        "../sass/themes/default/_green.scss",
+        "../sass/themes/default/_light_green.scss",
+        "../sass/themes/default/_lime.scss",
+        "../sass/themes/default/_yellow.scss",
+        "../sass/themes/default/_amber.scss",
+        "../sass/themes/default/_orange.scss",
+        "../sass/themes/default/_deep_orange.scss",
+        "../sass/themes/default/_brown.scss",
+        "../sass/themes/default/_grey.scss",
+        "../sass/themes/default/_blue_grey.scss"
+    ],
+    "names": [],
+    "file": "style-basic.css"
+}

@@ -1,0 +1,95 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+// Clear inner floats
+.clearfix::after {
+	clear: both;
+	content: "";
+	display: table;
+}
+
+// Prevent image drag
+img {
+	-webkit-user-drag: none;
+	@include user-select(none);
+}
+
+// Create image cover, include your image in `background-image` properties on your HTML tag
+// after used this class, you just need to set height or width of selector
+.cover-div-img {
+  @include cover-div-img;
+}
+
+// Create image fixed / simple parallax effect, include your image in `background-image` properties on your HTML tag
+// after used this class, you just need to set height or width of selector
+.fixed-img {
+  @include fixed-img;
+}
+
+// Prevent textarea to resizeable
+.no-resize {
+  resize: none;
+}
+
+// Justify text align by class
+.justify-left {
+  @include justify(left);
+}
+
+.justify-right {
+  @include justify(right);
+}
+
+.justify-center {
+  @include justify(center);
+}
+
+// Image wrapper/container
+.wrapper-image {
+	overflow: hidden;
+	>a {
+		>img {
+			width: 100%;
+		}
+	}
+	>img {
+		width: 100%;
+	}
+}
+
+// Temporary hidden object,
+// or you can used bootstrap classes on url below 
+// https://getbootstrap.com/docs/4.6/utilities/display/#hiding-elements
+.hide {
+    display: none;
+}
+
+// Nested list
+.nested-list {
+	display: flex;
+	flex-direction: column;
+	counter-reset: item;
+	li {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		&::before {
+			content: counters(item, ".") " ";
+			counter-increment: item;
+			width: 3%;
+		}
+		>span{
+			width: 97%;
+		}
+	}
+	.nested-list {
+		width: 100%;
+		display: block;
+	}
+}
+
+.reset-list{
+	@include reset-list;
+}

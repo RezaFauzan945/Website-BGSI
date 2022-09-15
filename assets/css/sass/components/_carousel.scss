@@ -1,0 +1,69 @@
+// -----------------------------------------------------------------------------
+// This file contains carousel ui component rules
+// -----------------------------------------------------------------------------
+
+.carousel{
+    &-homepage{
+        .carousel{
+            &-item{
+                position: relative;
+                &.active{
+                    z-index: unset;
+                }
+            }
+            &-caption{
+                right: unset;
+                top: 0;
+                left: unset;
+                width: 100%;
+                height: 100%;
+                display: flex !important;
+                @include flexCenter;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    @include background(linear-gradient(180deg, #16B3AC 0%, rgba(0, 0, 0, 0.05) 114.19%));
+                    height: 100%;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                }
+                >span{
+                    position: relative;
+                    z-index: 1;
+                    padding: 0 15%;
+                    >h1,
+                    p{
+                        text-shadow: standard(shadows, z2);
+                    }
+                    >h1{
+                        @include font-type(Bold);
+                        @include font_size(set(header, xxl));
+                        margin-bottom: 25px;
+                        
+                        @include media_max(lg){
+                            margin-bottom: 20px;
+                            @include font_size(set(header, lg));
+                        }
+                        @include media_max(sm){
+                            margin-bottom: 10px;
+                            @include font_size(set(header, xs));
+                        }
+                    }
+                    >p{
+                        margin-bottom: 35px;
+                        line-height: 2;
+                        @include media_max(lg){
+                            margin-bottom: 25px;
+                        }
+                        @include media_max(sm){
+                            @include font_size(set(base, xs));
+                            margin-bottom: 15px;
+                            line-height: 1.5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,116 @@
+// -----------------------------------------------------------------------------
+// This file contains card ui component rules
+// -----------------------------------------------------------------------------
+
+.card{
+    &-disease-list{
+        .card-disease{
+            .vendor-brands{
+                background: standard(default, light_25);
+                padding: 8px 4px;
+                border-top-left-radius: 5px;
+                border-bottom-right-radius: 8px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                >.brand{
+                    height: 42px;
+                    > img{
+                        height: 100%;
+                        width: auto;
+                    }
+                }
+            }
+            .card{
+                &-body{
+                    padding: 2rem 1.5rem;
+                }
+                &-title{
+                    min-height: 48px;
+                    @include media_max(sm){
+                        min-height: unset;
+                    }
+                }
+                &-text{
+                    min-height: 120px;
+                    color: standard(default, dark_25);
+                    line-height: 2;
+                    @include media_max(sm){
+                        min-height: unset;
+                        line-height: 1.5;
+                        @include font_size(set(base, sm));
+                    }
+                }
+            }
+        }
+    }
+    &-programme{
+        .card{
+            &-body{
+                height: 100%;
+                display: inline-flex;
+                align-items: center;
+                
+                @include media_max(sm){
+                    padding: 20px 0 0 0!important;
+                    >div{
+                        padding-left: 0!important;
+                    }
+                }
+                >div{
+                    display: block;
+                    height: max-content;
+                    position: relative;
+                }
+            }
+            &-title{
+                margin-bottom: 1.5rem;
+                @include font-type(Bold);
+                @include media_max(sm){
+                    margin-bottom: 1rem;
+                }
+            }
+            &-text{
+                text-align: justify;
+                margin-bottom: 2.5rem;
+                color: standard(default, dark_25);
+                line-height: 2;
+                @include media_max(sm){
+                    min-height: unset;
+                    line-height: 1.5;
+                    margin-bottom: 1.2rem;
+                    @include font_size(set(base, sm));
+                }
+                & + a{
+                    @include font_size(set(base, sm));
+                }
+            }
+        }
+    }
+    &-contact{
+        border-radius: 10px;
+        background: standard(template, primary_main);
+        @include media_max(sm){
+            margin-bottom: 15px !important;
+        }
+        .card{
+            &-body{
+                @include flexboxes(flex, space-between, center);
+                color: standard(default, light_25);
+                @include media_max(sm){
+                    flex-direction: column;
+                    @include flexboxes(flex, center, center);
+                    padding-bottom: 1.75rem;
+                }
+                >h3{
+                    padding: 1rem 15px 1rem 0;
+                    margin: 0;
+                    @include media_max(sm){
+                        text-align: center;
+                        padding: .75rem 0 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
